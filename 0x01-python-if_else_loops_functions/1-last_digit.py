@@ -9,5 +9,5 @@ while flag:
     elif r == 0:
         print(f'Last digit of {number} is {r} and is 0')
     elif r < 6:
-        print(f'Last digit of {number} is {r * -1} and is less than 6 and not 0')
+        print(f'Last digit of {number} is {r} and is less than 6 and not 0')
     flag = False
