@@ -101,3 +101,5 @@ Do not cast the variable number into a string.
 - The Python file name will be stored in the environment variable $PYFILE.
 - The output filename should be $PYFILEc (e.g., if $PYFILE is my_script.py, the output filename should be my_script.pyc).
 - The script should print nothing to stdout.
+## 13. ByteCode -> Python #1
+A Shell script that compiles a Python script file. The Python file name is stored in the environment variable ``$PYFILE``
