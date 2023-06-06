@@ -8,7 +8,7 @@ while flag:
     if remainder > 5:
         print(f'Last digit of {number} is {remainder} and is greater than 5')
     elif remainder == 0:
-        print(f'Last digit of {number} is {remainder} is 0 and is 0')
+        print(f'Last digit of {number} is {remainder} and is 0')
     elif remainder < 6:
-        print(f'Last digit of {number} is {remainder} {lt}')
+        print(f'Last digit of {number} is {remainder}{lt}')
     flag = False
