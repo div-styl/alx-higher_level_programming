@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-r = number % 10
+if number < 0:
+    r = ((number * -1) % 10) * -1
+else:
+    r = number % 10
 flag = True
 while flag:
     if r > 5:
