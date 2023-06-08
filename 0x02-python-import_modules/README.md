@@ -1,34 +1,42 @@
 # this chapter made only for importin modules
 ## Task 0: Importing and Printing Addition Result
 In this task, you need to write a program that imports the add function from the file add_0.py and prints the result of the addition 1 + 2 = 3.
+
 FILE ---> ``0-add.py``
 
 ## Task 1: Importing Functions and Performing Maths
 For this task, you are required to write a program that imports functions from the file calculator_1.py and performs various mathematical operations using those functions. The program should print the result of each operation.
+
 FILE ---> ``1-calculation.py``
 
 ## Task 2: Printing Command-Line Arguments
 In this task, you need to write a program that prints the number of command-line arguments passed to it and lists those arguments with their positions.
+
 FILE ---> ``2-args.py``
 
 
 ## Task 3: Infinite Addition
 For this task, you have to write a program that prints the result of adding all the command-line arguments together.
+
 FILE ---> ``3-Infinite_add.py``
 
 ## Task 4: Discover Hidden Names
 In this task, you need to write a program that prints all the names defined in the compiled module hidden_4.pyc, excluding the ones starting with "__".
+
 FILE ---> ``4-hidden_discovery.py``
 
 ## Task 5: Importing a Variable
 For this task, you are required to write a program that imports the variable "a" from the file variable_load_5.py and prints its value.
+
 FILE ---> ``5-variable_load.py``
 
 ## Task 6: Building a Calculator
 In this task, you need to write a program that imports all functions from the file calculator_1.py and performs basic mathematical operations based on command-line arguments.
+
 FILE ---> ``100-my_calculator.py``
 ## Task 7: Easy Print
 For this task, you need to write a program that prints the string "#pythoniscool" to the standard output.
+
 FILE ---> ``101-easy_print.py``
 
 ## Task 8: ByteCode to Python
