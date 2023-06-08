@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
     """
-    get the len of the arguments 1st and then set condi
-	the -1 can be consider as an overwrite of arguments counter
-	the name of program consider as 0 and 1st argu is 1
-	therefor the -1 ghost the name of program and convert
-	the 1st arguments from value one to zero
+    take arguments and and count them
     """
     import sys
 
