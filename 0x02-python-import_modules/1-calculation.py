@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__ =="__main__":
+if __name__ == "__main__":
     """small calculatore that calculator assigned values"""
 from calculator_1 import *
 a = 10
