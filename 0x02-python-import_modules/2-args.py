@@ -12,7 +12,7 @@ the 1st arguments from value one to zero
 argucnt = len(sys.argv) - 1
 # our condi that will demonstaret our program
 if argucnt == 0:
-    print('0 arguments.') #.format(argucnt))
+    print('{} arguments.'.format(argucnt), end='')
 if argucnt >= 2:
     print('{} arguments:'.format(argucnt))
 for i in range(argucnt):
