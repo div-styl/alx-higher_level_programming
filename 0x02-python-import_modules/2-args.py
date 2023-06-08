@@ -12,7 +12,7 @@ if __name__ == '__main__':
     argucnt = len(sys.argv) - 1
     # our condi that will demonstaret our program
     if argucnt == 0:
-        print('{} arguments.'.format(argucnt))
+        print('0 arguments.')
     elif argucnt == 1:
         print('1 argument: ')
     else:
