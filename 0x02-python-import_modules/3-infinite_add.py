@@ -15,4 +15,4 @@ elif argvlen >= 2:
     sum = 0
     for i in range(1, argvlen + 1):
         sum += int(sys.argv[i])
-print(sum)
+print('{}'.format(sum))
