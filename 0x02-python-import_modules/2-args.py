@@ -10,7 +10,7 @@ if __name__ == '__main__':
     the 1st arguments from value one to zero
     """
     argucnt = len(sys.argv) - 1
-# our condi that will demonstaret our program
+    # our condi that will demonstaret our program
     if argucnt == 0:
         print('{} arguments.'.format(argucnt))
     elif argucnt == 1:
