@@ -6,10 +6,8 @@ if __name__ == '__main__':
     """
 import sys
 argvlen = len(sys.argv) - 1
-if (argvlen == 0):
-    print('{}'.format(argvlen))
-elif argvlen >= 1:
-    sum = 0
+sum = 0
+if argvlen >= 1:
     for i in range(1, argvlen + 1):
         sum += int(sys.argv[i])
 print('{}'.format(sum))
