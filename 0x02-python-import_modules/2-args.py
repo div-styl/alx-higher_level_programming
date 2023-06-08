@@ -13,9 +13,7 @@ argucnt = len(sys.argv) - 1
 # our condi that will demonstaret our program
 if argucnt == 0:
     print('{} arguments.'.format(argucnt))
-if argucnt == 1:
-    print('{}'.format(argucnt))
-else:
+if argucnt >= 2:
     print('{} arguments:'.format(argucnt))
 for i in range(argucnt):
     print('{}: {}'.format(i + 1, sys.argv[i + 1]))
