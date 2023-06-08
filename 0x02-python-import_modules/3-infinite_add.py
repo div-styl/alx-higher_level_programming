@@ -8,10 +8,7 @@ import sys
 argvlen = len(sys.argv) - 1
 if (argvlen == 0):
     print('{}'.format(argvlen))
-elif argvlen == 1:
-    print('{}'.format(sys.argv[1]))
-    exit()
-elif argvlen >= 2:
+elif argvlen >= 1:
     sum = 0
     for i in range(1, argvlen + 1):
         sum += int(sys.argv[i])
