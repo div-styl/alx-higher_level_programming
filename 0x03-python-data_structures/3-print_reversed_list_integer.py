@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    """
-    a function that prints all integer
-    of a list, in reverse order.
-    """
-    def print_reversed_list_integer(my_list=[]):
-        for i in range(len(my_list)):
-            print("{}".format(my_list[i]))
+def print_reversed_list_integer(my_list=[]):
+    for i in range(len(my_list)):
+        print("{}".format(my_list[i]))
