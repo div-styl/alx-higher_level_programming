@@ -4,6 +4,9 @@
 *@head: the head of the list
 * Return: void
 */
+int is_palindrome(listint_t **head);
+void reverselist(listint_t **head);
+
 void reverselist(listint_t **head)
 {
 	listint_t *past = NULL, *futur = NULL, *presence = *head;
