@@ -30,6 +30,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *slow = *head, *fast = *head;
 	listint_t *prev = NULL;
+  listint_t *ptr1, *ptr2;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1); /* check if the list is empty */
@@ -41,8 +42,8 @@ int is_palindrome(listint_t **head)
 	}
 	prev->next = NULL;
 	reverselist(&slow);
-	listint_t *ptr1 = *head;
-	listint_t *ptr2 = slow;
+  ptr1 = *head;
+  ptr2 = slow;
 
 	while (ptr1 != NULL && ptr2 != NULL)
 	{
