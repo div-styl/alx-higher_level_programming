@@ -1,10 +1,21 @@
-#!/usr/bin/python3
-divisible_by_2 = __import__('10-divisible_by_2').divisible_by_2
+import ctypes
 
-my_list = [0, 1, 2, 3, 4, 5, 6]
-list_result = divisible_by_2(my_list)
-
-i = 0
-while i < len(list_result):
-    print("{:d} {:s} divisible by 2".format(my_list[i], "is" if list_result[i] else "is not"))
-    i += 1
+lib = ctypes.CDLL('./libPyList.so')
+lib.print_python_list_info.argtypes = [ctypes.py_object]
+l = ['hello', 'World']
+lib.print_python_list_info(l)
+del l[1]
+lib.print_python_list_info(l)
+l = l + [4, 5, 6.0, (9, 8), [9, 8, 1024], "My string"]
+lib.print_python_list_info(l)
+l = []
+lib.print_python_list_info(l)
+l.append(0)
+lib.print_python_list_info(l)
+l.append(1)
+l.append(2)
+l.append(3)
+l.append(4)
+lib.print_python_list_info(l)
+l.pop()
+lib.print_python_list_info(l)
