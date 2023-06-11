@@ -1,11 +1,10 @@
 #include "lists.h"
+
 /**
 * reverselist - reverse the list
 *@head: the head of the list
 * Return: void
 */
-int is_palindrome(listint_t **head);
-void reverselist(listint_t **head);
 
 void reverselist(listint_t **head)
 {
@@ -20,11 +19,13 @@ void reverselist(listint_t **head)
 	}
 	*head = past;
 }
+
 /**
 * is_palindrome - function check if the list is palindrome
 *@head: the head of the list
 *Return: either 0 or 1
 */
+
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow = *head, *fast = *head;
