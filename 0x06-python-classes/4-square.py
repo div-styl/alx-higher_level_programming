@@ -16,7 +16,7 @@ class Square:
         """init func size"""
         return (self.__size)
 
-    @property
+    @size.setter
     def size(self, value):
         """ init the func
         Args:
