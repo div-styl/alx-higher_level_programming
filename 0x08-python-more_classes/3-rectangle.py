@@ -51,4 +51,7 @@ class Rectangle:
         if self.__height == 0 or self.__height == 0:
             return ""
         else:
-            return "\n".join(['#' * self.__width] * self.__height)
+            odd_character = ""
+            for _ in range(self.__height):
+                odd_character += "#" * self.__width + "\n"
+            return odd_character
