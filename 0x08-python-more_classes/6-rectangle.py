@@ -11,6 +11,7 @@ class Rectangle:
         """init the values"""
         self.width = width
         self.height = height
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
