@@ -48,6 +48,7 @@ class Rectangle:
         return (2 * (self.__height + self.__width))
 
     def __str__(self):
+        """printing the # character"""
         empty_string = ""
         if self.__height == 0 or self.__height == 0:
             return empty_string
