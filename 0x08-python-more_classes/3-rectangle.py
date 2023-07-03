@@ -48,12 +48,8 @@ class Rectangle:
         return (2 * (self.__height + self.__width))
 
     def __str__(self):
-        """printing the # character"""
-        empty_string = ""
-        if self.__height == 0 or self.__height == 0:
-            return empty_string
-        for i in range(self.__height):
-            empty_string += "#" * self.__width
-            if i != self.__height - 1:
-                empty_string += '\n'
-        return empty_string
+        """printing the #"""
+        if self.__width is 0 or self.__height is 0:
+            return ""
+        return ("\n".join(["".join([str('#')
+                for _ in range(self.__width)]) for _ in range(self.__height)]))
