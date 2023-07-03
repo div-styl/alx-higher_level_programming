@@ -53,9 +53,10 @@ class Rectangle:
 
     def __str__(self):
         """printing the #"""
-        if self.__height == 0 or self.__width == 0:
-            return ("")
-        return (str(self.print_symbol) * self.__width + "\n") * self.__height
+        if self.__width is 0 or self.__height is 0:
+            return ""
+        return ("\n".join(["".join([str(self.print_symbol)
+                    for _ in range(self.__width)]) for _ in range(self.__height)]))
 
     def __repr__(self):
         """print the origin cause"""
