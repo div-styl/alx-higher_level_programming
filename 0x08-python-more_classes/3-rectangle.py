@@ -49,11 +49,5 @@ class Rectangle:
 
     def __str__(self):
         if self.__height == 0 or self.__height == 0:
-            return ""
-        else:
-            odd_character = []
-            for i in range(self.__height):
-                [odd_character.append('#') for _ in range(self.__width)]
-                if i != self.__height - 1:
-                    odd_character.append('\n')
-            return "".join(odd_character)
+            return ("")
+        return "\n".join(['#' * self.__width] * self.__height)
