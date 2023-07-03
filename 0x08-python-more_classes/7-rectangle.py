@@ -56,7 +56,7 @@ class Rectangle:
         if self.__width is 0 or self.__height is 0:
             return ""
         return ("\n".join(["".join([str(self.print_symbol)
-                    for _ in range(self.__width)]) for _ in range(self.__height)]))
+                for _ in range(self.__width)]) for _ in range(self.__height)]))
 
     def __repr__(self):
         """print the origin cause"""
