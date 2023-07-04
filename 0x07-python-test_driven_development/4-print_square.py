@@ -2,7 +2,6 @@
 """define a func that orint the square number"""
 
 
-
 def print_square(size):
     """Print a square with the # character.
 

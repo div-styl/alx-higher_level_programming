@@ -2,7 +2,6 @@
 """Defines an integer addition function."""
 
 
-
 def add_integer(a, b=98):
     """Return the integer addition of a and b.
 
@@ -15,6 +14,6 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    if a is None  and b is None:
+    if a is None and b is None:
         return (None)
     return (int(a) + int(b))

@@ -2,15 +2,14 @@
 """define func"""
 
 
-
 def text_indentation(text):
     """
-    a function that prints a 
+    a function that prints a
     text with 2 new lines after each of these characters: ., ? and :
     Args:
     text: the argument in form of text
     Raise:
-    Typerror: if it is not a string 
+    Typerror: if it is not a string
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
