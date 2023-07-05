@@ -19,3 +19,5 @@ TypeError: a must be an integer
 0
 >>> print(add_integer(2.9, 0.2))
 2
+>>> add_integer(-6, 8)
+2
