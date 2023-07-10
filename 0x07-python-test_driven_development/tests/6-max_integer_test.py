@@ -14,9 +14,9 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_with_float(self):
         """test with float digits: return the max value"""
-        list = [0.4, 50.7, 50.9]
+        list = [0.4, 50.7, 51.9]
         output = max_integer(list)
-        self.assertEqual(output, 50.9)
+        self.assertEqual(output, 51.9)
 
     def test_with_string(self):
         """test with string and it should return typeerror"""
