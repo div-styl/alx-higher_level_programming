@@ -34,39 +34,41 @@ empty list:
   []
 
 print_sorted method called with 2 args:
-    >>> ml.print_sorted([4, 2, 5], 1)
-    Traceback (most recent call last):
-    TypeError: print_sorted() takes 1 positional argument but 3 were given
+  >>> mli = MyList()
+  >>> mli.print_sorted([4, 3, 1])
+  Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+  TypeError: MyList.print_sorted() takes 1 positional argument but 2 were given
 
 Normal list test:
-    >>> ml = MyList([2, 10, 1])
-    >>> ml.print_sorted()
+    >>> mli = MyList([2, 10, 1])
+    >>> mli.print_sorted()
     [1, 2, 10]
 
 Normal list test 2:
-    >>> ml = MyList([1, 4, 2, 3, 5])
-    >>> ml.print_sorted()
+    >>> mli = MyList([1, 4, 2, 3, 5])
+    >>> mli.print_sorted()
     [1, 2, 3, 4, 5]
 
 Negative ints list test:
-    >>> ml = MyList([-1000, -98, -232565, 0, -23423434, -123])
-    >>> ml.print_sorted()
+    >>> mli = MyList([-1000, -98, -232565, 0, -23423434, -123])
+    >>> mli.print_sorted()
     [-23423434, -232565, -1000, -123, -98, 0]
 
 Original list unchanged:
-    >>> ml = MyList([2, 10, 1, -10, 20, 100, 0])
-    >>> ml.print_sorted()
+    >>> mli = MyList([2, 10, 1, -10, 20, 100, 0])
+    >>> mli.print_sorted()
     [-10, 0, 1, 2, 10, 20, 100]
-    >>> ml
+    >>> mli
     [2, 10, 1, -10, 20, 100, 0]
 
 List already in order:
-    >>> ml = MyList([-10, 0, 1, 2, 10, 20, 100])
-    >>> ml.print_sorted()
+    >>> mli = MyList([-10, 0, 1, 2, 10, 20, 100])
+    >>> mli.print_sorted()
     [-10, 0, 1, 2, 10, 20, 100]
 
 Test append:
-    >>> ml = MyList()
-    >>> ml.append(10)
-    >>> ml
+    >>> mli = MyList()
+    >>> mli.append(10)
+    >>> mli
     [10]
