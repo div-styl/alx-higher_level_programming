@@ -1,30 +1,31 @@
 #!/usr/bin/python3
-"""define a class student"""
+""" define a class student"""
 
 
 class Student:
-    """represent the class student"""
+    """ Class to create student instances """
+
     def __init__(self, first_name, last_name, age):
-        """init values in the argumen func"""
+        """ Special method to initialize """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """
-        func that retrieves a dictionary
-        representation of a Student
-        """
+        """ Method that returns directory description """
         obj = self.__dict__.copy()
         if type(attrs) is list:
+
             for item in attrs:
                 if type(item) is not str:
                     return obj
 
             j_list = {}
-            for atr in range(len(attrs)):
-                for tar in obj:
-                    if attrs[atr] == tar:
-                        j_list[tar] = obj[atr]
+
+            for iatr in range(len(attrs)):
+                for satr in obj:
+                    if attrs[iatr] == satr:
+                        j_list[satr] = obj[satr]
             return j_list
+
         return obj
