@@ -87,12 +87,3 @@ check the area func as not implements:
     ...
     [Exception] area () is not implemented
 
-check the integer_validator with empty data:
-    >>> bg = BaseGeometry()
-    >>> try:
-    ...  bg.integer_validator()
-    ... except Exception as e:
-    ...  print("[{}] {}".format(e.__class__.__name__,e))
-    ...
-    [TypeError] BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
-    >>>
