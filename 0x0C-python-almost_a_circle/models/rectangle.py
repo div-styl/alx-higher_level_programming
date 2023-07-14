@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """define the class Rectangle"""
-
 from models.base import Base
 
 
@@ -42,12 +41,12 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
-    
+
     @property
     def x(self):
         """retrieve itself"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """set the value of x"""
@@ -56,7 +55,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be > 0")
         self.__x = value
-    
+
     @property
     def y(self):
         """retrieve itself"""
@@ -70,3 +69,68 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be > 0")
         self.__y = value
+
+    def area(self):
+        """return the area of rectangle"""
+        return self.height * self.width
+
+    def display(self):
+        """print the rectangle into stdoutput"""
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print('') for _ in range(self.y)]
+        for he in range(self.height):
+            [print('', end='') for _ in range(self.x)]
+            [print('#', end='') for _ in range(self.width)]
+            print('')
+
+    def __str__(self):
+        """informal printing of rectangle"""
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self. id,
+                                                       self.x, self.y,
+                                                       self.width , self.height)
+
+    def update(self, *args, **kwargs):
+            """
+            assigns an argument to each attribute
+            ARGS:
+                1st argument should be the id attribute
+                2nd argument should be the width attribute
+                3rd argument should be the height attribute
+                4th argument should be the x attribute
+                5th argument should be the y attribute
+            """
+            if args and len(args) != 0:
+                counter = 0
+                for arguments in args:
+                    if counter == 0:
+                        if args is None:
+                            self.__init__(self.width, self.height, self.x, self.y)
+                        else:
+                            self.id = arguments
+                    elif counter == 1:
+                        self.width = arguments
+                    elif counter == 2:
+                        self.height = arguments
+                    elif counter == 3:
+                        self.x = arguments
+                    elif counter == 4:
+                        self.y = arguments
+                    counter += 1
+            elif kwargs and len(kwargs) != 0:
+                for key, value in kwargs.items():
+                    if key == "id":
+                        if value is None:
+                            self.__init__(self.width, self.height, self.x, self.y)
+                        else:
+                            self.id = value
+                    elif key == "width":
+                        self.width = value
+                    elif key == "height":
+                        self.height = value
+                    elif key == "x":
+                        self.x = value
+                    elif key == "y":
+                        self.y = value
