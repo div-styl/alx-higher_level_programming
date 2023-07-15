@@ -82,7 +82,7 @@ class Rectangle(Base):
 
         [print('') for _ in range(self.y)]
         for he in range(self.height):
-            [print('', end='') for _ in range(self.x)]
+            [print(' ', end='') for _ in range(self.x)]
             [print('#', end='') for _ in range(self.width)]
             print('')
 
@@ -125,3 +125,13 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """small dictionary"""
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
