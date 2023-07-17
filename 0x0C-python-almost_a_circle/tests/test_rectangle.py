@@ -100,8 +100,8 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "height must be an integre"):
             Rectangle(10, float("huh"))
 
-    def test_width_negative(self):
-        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+    def test_height_negative(self):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(-10, 10)
 
     def test_height_zero(self):
