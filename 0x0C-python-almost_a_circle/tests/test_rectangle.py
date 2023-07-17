@@ -65,8 +65,45 @@ class TestRectangle(unittest.TestCase):
 
     def test_width_list(self):
         with self.assertRaisesRegex(TypeError, "width must be an integre"):
-            Rectangle([1,2], 4)
+            Rectangle([1, 2], 4)
 
     def test_width_tuple(self):
         with self.assertRaisesRegex(TypeError, "width must be an integre"):
-            Rectangle({"hey",2}, 4)
+            Rectangle({"hey", 2}, 4)
+
+    def test_width_float(self):
+        with self.assertRaisesRegex(TypeError, "width must be an integre"):
+            Rectangle(float("huh"), 4)
+
+    def test_width_zero(self):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(0, 10)
+
+    def test_width_negative(self):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(-10, 10)
+
+    """test the height argumensts"""
+    def test_height_str(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integer"):
+            Rectangle(10, "10")
+
+    def test_height_list(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integre"):
+            Rectangle(10, [1, 2])
+
+    def test_height_tuple(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integre"):
+            Rectangle(10, {"hey", 2})
+
+    def test_height_float(self):
+        with self.assertRaisesRegex(TypeError, "height must be an integre"):
+            Rectangle(10, float("huh"))
+
+    def test_width_negative(self):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(-10, 10)
+
+    def test_height_zero(self):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+            Rectangle(10, 0)
