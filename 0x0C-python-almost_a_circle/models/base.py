@@ -9,7 +9,8 @@ import os.path
 
 class Base:
     """
-    Base class for managing the id attribute of all classes that inherit from it.
+    Base class for managing the id attribute of all
+    classes that inherit from it.
     """
 
     __nb_objects = 0
@@ -54,9 +55,10 @@ class Base:
             int: Number of characters written to the file.
         """
         filename = cls.__name__ + '.json'
-        json_attrs = [obj.to_dictionary() for obj in list_of_objs] if list_of_objs else None
+        json_attrs = [obj.to_dictionary()
+                      for obj in list_of_objs] if list_of_objs else None
         json_string = cls.to_json_string(json_attrs)
-        
+
         with open(filename, mode='w', encoding='utf-8') as file:
             return file.write(json_string)
 
@@ -78,7 +80,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """
-        Create a new instance of the class with the given dictionary attributes.
+        Create a new instance of the class with
+        the given dictionary attributes.
 
         Args:
             **dictionary: Dictionary with the attributes for the new instance.
@@ -107,10 +110,10 @@ class Base:
             list: List of instances.
         """
         filename = cls.__name__ + '.json'
-        
+
         if not os.path.exists(filename):
             return []
-        
+
         with open(filename, mode='r', encoding='utf-8') as file:
             json_data = cls.from_json_string(file.read())
             return [cls.create(**data) for data in json_data]
