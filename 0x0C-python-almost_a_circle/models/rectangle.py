@@ -13,8 +13,10 @@ class Rectangle(Base):
         Args:
             width (int): Width of the rectangle.
             height (int): Height of the rectangle.
-            x (int, optional): x-coordinate of the rectangle's position. Defaults to 0.
-            y (int, optional): y-coordinate of the rectangle's position. Defaults to 0.
+            x (int, optional): x-coordinate of the rectangle's
+            position. Defaults to 0.
+            y (int, optional): y-coordinate of
+            the rectangle's position. Defaults to 0.
             id (int, optional): Unique ID of the rectangle. Defaults to None.
         """
         super().__init__(id)
