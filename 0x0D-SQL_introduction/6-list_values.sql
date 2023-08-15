@@ -1,0 +1,2 @@
+--- SHOW ALL VALUES WITHIN THE TABLE ---
+SELECT * FROM first_table;
