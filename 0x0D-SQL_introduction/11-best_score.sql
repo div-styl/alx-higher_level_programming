@@ -1,0 +1,4 @@
+-- list the score in ordered way within 
+SELECT  score, name FROM second_table
+WHERE score >= 10
+ORDER BY score DESC;
