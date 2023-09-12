@@ -3,10 +3,11 @@ exports.esrever = function (list) {
   const len = list.length - 1;
   let cnt = 0;
   while ((len - cnt) > 0) {
-    const temp = list[len - cnt];
-    list[len - cnt] = list[cnt];
+    const temp = list[len];
+    list[len] = list[cnt];
     list[cnt] = temp;
     cnt++;
+    len--;
   }
   return list;
 };
