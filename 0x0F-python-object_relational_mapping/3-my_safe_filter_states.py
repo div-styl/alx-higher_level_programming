@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """script which filter by the argument that is passed"""
 
 import MySQLdb
@@ -15,7 +14,7 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     search = argv[4]
-    cur.execute("SELECT * FROM states WHERE name LIKE %s", (search, ))
+    cur.execute("SELECT * FROM states WHERE name LIKE %s", (search,))
     rows = cur.fetchall()
     for row in rows:
         print(row)
