@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 Contains State class and Base,
 an instance of declarative_base()
 """
@@ -13,6 +13,7 @@ Base = declarative_base(metadata=mymdata)
 
 class State(Base):
     """State class"""
-    __tablename__ = 'states'
+
+    __tablename__ = "states"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
