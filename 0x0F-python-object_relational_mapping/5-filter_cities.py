@@ -13,10 +13,9 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     cmdsq = """ SELECT cities.name
-    FROM states
-    INNER JOIN cities ON states.id=cities.state_id
-    WHERE states.name=%s
-    ORDER BY cities.id ASC"""
+    FROM cities
+    INNER JOIN states ON states.id=cities.state_id
+    WHERE states.name=%s"""
     cur.execute(
         cmdsq,
         (sys.argv[4],),
