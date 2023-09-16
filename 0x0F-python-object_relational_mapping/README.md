@@ -47,3 +47,6 @@
 | 12. Update a state | [12-model_state_update_id_2.py](./12-model_state_update_id_2.py) |
 | 13. Delete states | [13-model_state_delete_a.py](./13-model_state_delete_a.py) |
 | 14. Cities in state | [model_city.py](./model_city.py), [14-model_city_fetch_by_state.py](./14-model_city_fetch_by_state.py) |
+| 15. City relationship | [relationship_city.py](./relationship_city.py), [relationship_state.py](./relationship_state.py), [100-relationship_states_cities.py](./100-relationship_states_cities.py) |
+| 16. List relationship | [101-relationship_states_cities_list.py](./101-relationship_states_cities_list.py) |
+| 17. From city | [102-relationship_cities_states_list.py](./102-relationship_cities_states_list.py) |
