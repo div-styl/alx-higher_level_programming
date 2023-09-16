@@ -19,7 +19,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter(State.name == (sys.argv[4],))
     for instance in session.query(State).order_by(State.id):
         print("{}: {}".format(instance.id, instance.name))
         for city_ins in instance.cities:
