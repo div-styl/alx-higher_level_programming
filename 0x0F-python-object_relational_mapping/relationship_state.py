@@ -3,7 +3,7 @@
 contains the def class of state
 """
 
-from sqlalchemy import Column, Integer, String, Metadata
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
