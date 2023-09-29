@@ -9,15 +9,14 @@ import requests
 
 if __name__ == "__main__":
     let = "" if len(argv) == 1 else argv[1]
-    search = {"q": let}
+    payload = {"q": let}
 
-    r = requests.post("http://0.0.0.0:5000/search_user", data=search)
-
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
     try:
-        rep = r.json()
-        if rep == {}:
-            print(" No result")
+        response = r.json()
+        if response == {}:
+            print("No result")
         else:
-            print("[{}] {}".format(rep.get("id"), rep.get("name")))
+            print("[{}] {}".format(response.get("id"), response.get("name")))
     except ValueError:
         print("Not a valid JSON")
