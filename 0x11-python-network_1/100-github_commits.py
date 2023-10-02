@@ -1,23 +1,32 @@
 #!/usr/bin/python3
 """
-ists the 10 most recent
-commits on a given GitHub repository.
+Lists the 10 most recent commits on a given GitHub repository.
 """
-from sys import argv
+
+import sys
 import requests
 
+def get_recent_commits(owner, repo, limit=10):
+    """ retrieve recent commit """
+    url = f'https://api.github.com/repos/{owner}/{repo}/commits?per_page={limit}'
+    response = requests.get(url)
+    return response.json()
+
+def print_commits(commits):
+    """ print commits """
+    for commit in commits:
+        sha = commit.get("sha")
+        author_name = commit.get("commit").get("author").get("name")
+        print(f'{sha}: {author_name}')
+
+def main():
+    """ the functions
+    """
+    owner = sys.argv[1]
+    repo = sys.argv[2]
+
+    recent_commits = get_recent_commits(owner, repo)
+    print_commits(recent_commits)
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits".format(
-        argv[1], argv[2]
-    )
-    r = requests.get(url)
-    cmmt = r.json()
-    try:
-        for i in range(10):
-            print("{}: {}".format(
-                cmmt[i].get("sha"),
-                cmmt[i].get("commit").get("author").get("name")
-            ))
-    except IndexError:
-        pass
+    main()
