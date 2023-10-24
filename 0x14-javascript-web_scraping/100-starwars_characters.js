@@ -10,15 +10,14 @@ request.get(API_URL + id, function (err, resp, body) {
     console.log(err);
   }
   const data = JSON.parse(body);
-  const p = data.characters;
-  for (const i in p) {
-    request.get(i, function (err, resp, body1) {
-      if (err) {
-        console.log(err);
-      } else {
-        const data1 = JSON.parse(body1);
-        console.log(data1);
+  const dd = data.characters;
+  for (const i of dd) {
+    request.get(i, function (error, resp, body1) {
+      if (error) {
+        console.log(error);
       }
+      const data1 = JSON.parse(body1);
+      console.log(data1.name);
     });
   }
 });
